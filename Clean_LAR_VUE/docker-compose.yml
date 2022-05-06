@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+    nginx:
+        build: ./nginx/
+        container_name: laravel-clean-nginx
+        working_dir: /home/clean
+        ports:
+            - 8080:80
+        volumes:
+            - ./src:/home/clean
+    php:
+        build: ./php/
+        container_name: laravel-clean-php
+        working_dir: /home/clean
+        volumes: 
+            - ./src:/home/clean
+        env_file:
+            - ./src/.env
+    db:
+        container_name: laravel-clean-db
+        image: mariadb:10.6.5
+        env_file:
+            - ./mysql/.env
+        volumes:
+            - ./mysql/data:/var/lib/mysql
+        ports:
+            - 3336:3306
