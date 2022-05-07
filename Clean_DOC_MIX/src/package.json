@@ -33,11 +33,13 @@
         "vue3-popper": "^1.4.2"
     },
     "devDependencies": {
+        "alpinejs": "^3.10.2",
         "axios": "^0.25",
         "eslint": "^8.9.0",
         "eslint-plugin-vue": "^8.4.1",
         "eslint-webpack-plugin": "^3.1.1",
         "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.21",
         "resolve-url-loader": "^4.0.0",
         "sass": "^1.42.1",
         "sass-loader": "^12.1.0",
